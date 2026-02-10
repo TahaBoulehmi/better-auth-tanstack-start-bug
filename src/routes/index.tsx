@@ -5,7 +5,7 @@ export const Route = createFileRoute('/')({
     <div>
       <h1>Home</h1>
       <Link to='/test' preload={false}>
-        Go to Test (client-side nav)
+        Go to Test (error page)
       </Link>
     </div>
   ),

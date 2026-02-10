@@ -3,6 +3,7 @@ import { createRouter } from '@tanstack/react-router';
 import { routeTree } from './routeTree.gen';
 
 import { setupRouterSsrQueryIntegration } from '@tanstack/react-router-ssr-query';
+import { DefaultCatchBoundary } from './components/DefaultCatchBoundary';
 
 export function getRouter() {
   const queryClient = new QueryClient({
@@ -17,6 +18,7 @@ export function getRouter() {
     routeTree,
     context: { queryClient },
     defaultPreload: 'intent',
+    defaultErrorComponent: DefaultCatchBoundary,
     defaultPendingMs: 500, // Show pending after 500ms
     defaultPendingMinMs: 1000, // Show pending for at least 1000ms
     scrollRestoration: true,

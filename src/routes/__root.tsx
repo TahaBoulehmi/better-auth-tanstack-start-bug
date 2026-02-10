@@ -18,14 +18,14 @@ export const rootQueryOptions = () =>
 export const Route = createRootRouteWithContext<{
   queryClient: QueryClient;
 }>()({
-  beforeLoad: async ({ context }) => {
-    const data = await context.queryClient.fetchQuery(rootQueryOptions());
-    context.queryClient.setQueryData(['root-data'], data);
-    return { items: data };
-  },
-  loader: async ({ context }) => {
-    return { items: context.items };
-  },
+  // beforeLoad: async ({ context }) => {
+  //   const data = await context.queryClient.fetchQuery(rootQueryOptions());
+  //   context.queryClient.setQueryData(['root-data'], data);
+  //   return { items: data };
+  // },
+  // loader: async ({ context }) => {
+  //   return { items: context.items };
+  // },
   head: () => ({
     meta: [
       {
